@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            font-family: arial;
+            font-size: 20px;
+            margin: 25px;
+            width: 350px;
+            height: 200px;
+            text-align: center;
+        
+          }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>Reg101 Clone</h3>
+    <form action="{{url_for('match')}}" method="post">
+        <input type="text" name="pattern" placeholder="Input The regular expression"><br><br>
+        <textarea name="text" id="text_id" cols="30" rows="10" placeholder="Input Text"></textarea><br><br>
+        <button type="submit">Match</button>
+    </form>
+    <h3>Results</h3>
+    {%for result in results%}
+    <li>{{result}}</li>
+    {%endfor%}
+    </div>
+
+</body>
+</html>
