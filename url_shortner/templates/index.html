@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h3 class="title">{% block title %} Shorten .............. &#x1F49E;{% endblock %}</h3>
+    <div class="content">
+        
+
+        <form action="{{url_for('index')}}", method="POST">
+            <p>Kindly Input Your full url below to shorten it &#x1F49E; &#x2763;</p>
+            <input type="text" name="url" placeholder="Input Url" size="60">
+            <button type="submit">Shorten</button>
+        </form>
+    </div>
+{% endblock %}
